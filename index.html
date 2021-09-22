@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping App</title>
+    <script src="https://kit.fontawesome.com/3190ea57df.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <nav id="topbar">
+            <div id="left-menu">
+                <div id="logo"><a href="index.html"><span>Shop</span>lane</a></div>
+                <a href="#clothing-section">Clothing</a>
+                <a href="#accessory-section">Accessories</a>
+            </div>
+            <div id="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input id="search-box" type="text" name="search" placeholder="Search for Clothing and Accessories"/>
+            </div>
+            <div id="right-menu">
+                <div id="cart-wrapper">
+                    <p id="cart-count">0</p>
+                    <a href="checkout.html"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <img src="Images/IMG_20200801_105625.jpg" />
+            </div>
+        </nav>
+    </header>
+    <main> 
+        <section>
+            <div class="slides" style="max-width:800px">
+                <img class="mySlides" src="Images/96OnkX7.png" style="width:100%">
+                <img class="mySlides" src="Images/KtGxwnN.png" style="width:100%">
+                <img class="mySlides" src="Images/p0wdadG.png" style="width:100%">
+                <img class="mySlides" src="Images/sfjg9R8.png" style="width:100%">
+              </div>
+        </section>
+
+        <section id="clothing-section" class="homepage-section">
+            <h3 class="section-heading">Clothing for Men and Women</h3>
+
+            <div id="clothing-grid" class="product-grid">
+            </div>
+        </section>
+
+        <section id="accessory-section" class="homepage-section">
+            <h3 class="section-heading">Accessories for Men and Women</h3>
+
+            <div id="accessory-grid" class="product-grid">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p class="footer-heading">Online Store</p>
+            <a href="/" class="footer-link">Men Clothing</a>
+            <a href="/" class="footer-link">Women Clothing</a>
+            <a href="/" class="footer-link">Men Accessories</a>
+            <a href="/" class="footer-link">Women Accessories</a>
+        </div>
+        <div>-+
+            <p class="footer-heading">Helpful Links</p>
+            <a href="/" class="footer-link">Home</a>
+            <a href="/" class="footer-link">About</a>
+            <a href="/" class="footer-link">Contact</a>
+        </div>
+        <div>
+            <p class="footer-heading">Partners</p>
+            <a href="/" class="footer-link">Zara</a>
+            <a href="/" class="footer-link">Pantaloons</a>
+            <a href="/" class="footer-link">Levis</a>
+            <a href="/" class="footer-link">UCB</a>
+            <a href="/" class="footer-link">+ Many More</a>
+        </div>
+        <div>
+            <p class="footer-heading">Address</p>
+            <p href="/" class="footer-link">Building 101</p>
+            <p href="/" class="footer-link">Central Avenue</p>
+            <p href="/" class="footer-link">LA - 902722</p>
+            <p href="/" class="footer-link">Suhaiil S</p>
+        </div>
+    </footer>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 3000);    
+        }
+    </script>
+    <script src="product.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
